@@ -37,20 +37,24 @@
   headers.
  */
 
-#ifdef __cplusplus
+#ifdef __cplusplus//判断是否是用C++语言书写的，如果是的话，那么在C++中用C写需要使用这个格式说明一下;
 extern "C" {
 #endif
 
 #include <event2/event-config.h>
+
 #ifdef _EVENT_HAVE_SYS_TYPES_H
 #include <sys/types.h>
 #endif
+
 #ifdef _EVENT_HAVE_SYS_TIME_H
 #include <sys/time.h>
 #endif
+
 #ifdef _EVENT_HAVE_STDINT_H
 #include <stdint.h>
 #endif
+
 #include <stdarg.h>
 
 /* For int types. */
@@ -60,6 +64,7 @@ extern "C" {
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
 #endif
+
 #include <winsock2.h>
 #include <windows.h>
 #undef WIN32_LEAN_AND_MEAN
